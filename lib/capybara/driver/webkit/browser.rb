@@ -18,6 +18,10 @@ class Capybara::Driver::Webkit
       command("Find", query).split(",")
     end
 
+    def remove_session_cookies!
+      command("RemoveSessionCookies")
+    end
+
     def reset!
       command("Reset")
     end

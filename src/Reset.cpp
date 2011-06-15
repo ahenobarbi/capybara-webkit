@@ -1,3 +1,4 @@
+#include "CleanableCookieJar.h"
 #include "Reset.h"
 #include "WebPage.h"
 
@@ -9,7 +10,7 @@ void Reset::start(QStringList &arguments) {
 
   page()->triggerAction(QWebPage::Stop);
   page()->mainFrame()->setHtml("<html><body></body></html>");
-  page()->networkAccessManager()->setCookieJar(new QNetworkCookieJar());
+  page()->networkAccessManager()->setCookieJar(new CleanableCookieJar());
   QString response = "";
   emit finished(true, response);
 }

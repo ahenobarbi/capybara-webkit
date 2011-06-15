@@ -3,6 +3,7 @@
 #include "Visit.h"
 #include "Find.h"
 #include "Command.h"
+#include "RemoveSessionCookies.h"
 #include "Reset.h"
 #include "Node.h"
 #include "Url.h"
@@ -80,6 +81,8 @@ void Connection::processArgument(const char *data) {
   }
 }
 
+#include<iostream>
+#include<fstream>
 void Connection::startCommand() {
   m_command = createCommand(m_commandName.toAscii().constData());
   if (m_command) {

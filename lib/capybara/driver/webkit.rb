@@ -67,6 +67,10 @@ class Capybara::Driver::Webkit
   def wait_until(*args)
   end
 
+  def remove_session_cookies!
+    browser.remove_session_cookies!
+  end
+
   def reset!
     browser.reset!
   end
