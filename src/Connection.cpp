@@ -3,6 +3,7 @@
 #include "Visit.h"
 #include "Find.h"
 #include "Command.h"
+#include "RemoveSessionCookies.h"
 #include "Reset.h"
 #include "Node.h"
 #include "Url.h"
